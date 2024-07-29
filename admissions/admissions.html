@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../assets/star.svg" type="image/x-icon">
+    <!-- LINK TO CSS -->
+    <link rel="stylesheet" href="./admissions.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER WITH NAVIGATION AND COLLEGE LOGO -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/star.svg" alt="College Logo">
+                <h1>The Star | Admission Form</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../home/home.html">Home</a></li>
+                    <li><a href="../academics/academics.html">Academics</a></li>
+                    <li><a href="../admissions/admissions.html">Admission</a></li>
+                    <li><a href="../gallery/gallery.html">Gallery</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA WITH CENTERED CONTAINER AND FORM SECTION -->
+    <main>
+        <div class="container">
+
+            <!-- THE STUDENT FORM CURATED FROM AN EXAMPLE ADMISSION LETTER I USED A WHILE BACK -->
+            <section id="admission-form">
+                <h2>Student Admission Form</h2>
+                <form action="https://formspree.io/f/xeqyygrd" method="POST">
+        
+                    <!-- The first form set collects general info i.e name, email and DOB -->
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <div class="form-group">
+                            <label for="name">Full Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="_replyto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">Date of Birth:</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                    </fieldset>
+        
+                    <!-- This form set collects previous academic info, name of previous school and grade point average -->
+                    <fieldset>
+                        <legend>Academic Information</legend>
+                        <div class="form-group">
+                            <label for="previous-school">Previous School/College:</label>
+                            <input type="text" id="previous-school" name="previous-school" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="previous-gpa">Previous GPA/Percentage:</label>
+                            <input type="text" id="previous-gpa" name="previous-gpa" required>
+                        </div>
+                    </fieldset>
+        
+                    <!-- This form set collects the method of fee payment preferred by the student-->
+                    <fieldset>
+                        <legend>Fee Payment Information</legend>
+                        <div class="form-group">
+                            <label for="payment-method">Payment Method:</label>
+                            <select id="payment-method" name="payment-method" required>
+                                <option value="credit-card">Credit Card</option>
+                                <option value="debit-card">Debit Card</option>
+                                <option value="bank-transfer">Bank Transfer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="card-number">Card Number:</label>
+                            <input type="text" id="card-number" name="card-number" required>
+                        </div>
+                    </fieldset>
+        
+                    <!-- This form set collects sport activities preferred by the student -->
+                    <fieldset>
+                        <legend>Extracurricular Activities</legend>
+                        <div class="form-group">
+                            <label for="sports">Sports:</label>
+                            <select id="sports" name="sports">
+                                <option value="">Select Sport</option>
+                                <option value="football">Football</option>
+                                <option value="basketball">Basketball</option>
+                                <option value="volleyball">Volleyball</option>
+                                <option value="tennis">Tennis</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- This form set collects the gender of the student -->
+                    <fieldset class="gender">
+                        <legend>Gender</legend>
+                        <div class="form-group">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">M</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">F</label>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- This form collects student contact details as well as their parents and next of kins -->
+                    <fieldset>
+                        <legend>Contact Details</legend>
+                        <div class="form-group">
+                            <label for="student-contact">Student Contact:</label>
+                            <input type="tel" id="student-contact" name="student-contact" placeholder="Student Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="parent-contact">Parent Contact:</label>
+                            <input type="tel" id="parent-contact" name="parent-contact" placeholder="Parent Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="next-of-kin-contact">Next of Kin Contact:</label>
+                            <input type="tel" id="next-of-kin-contact" name="next-of-kin-contact" placeholder="Next of Kin Phone Number">
+                        </div>
+                    </fieldset>
+                    
+                    <!-- This form collects sponsor details in case the student is being admitted through sponsorship -->
+                    <fieldset>
+                        <legend>Sponsorship Details</legend>
+                        <div class="form-group">
+                            <label for="sponsor-name">Sponsor Name:</label>
+                            <input type="text" id="sponsor-name" name="sponsor-name" placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="sponsor-email">Sponsor Email:</label>
+                            <input type="email" id="sponsor-email" name="sponsor-email" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="sponsor-phone">Sponsor Phone:</label>
+                            <input type="tel" id="sponsor-phone" name="sponsor-phone" placeholder="Phone Number">
+                        </div>
+                    </fieldset>
+                    
+                    <!-- This form collects the course the student wants to be admitted to -->
+                    <fieldset>
+                        <legend>Choose a Course</legend>
+                        <div class="form-group">
+                            <label for="course">Select Course:</label>
+                            <select id="course" name="course">
+                                <option value="">Select Course</option>
+                                <option value="Applied Bioengineering">Applied Bioengineering</option>
+                                <option value="Biochem & Molecular Biology">Biochem & Molecular Biology</option>
+                                <option value="Forensic Science">Forensic Science</option>
+                                <option value="Medical Biochemistry">Medical Biochemistry</option>
+                                <option value="Electronic Engineering">Electronic Engineering</option>
+                                <option value="Computer Engineering">Computer Engineering</option>
+                                <option value="Telecommunication Engineering">Telecommunication Engineering</option>
+                                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="Information Technology">Information Technology</option>
+                                <option value="Analytical Chemistry">Analytical Chemistry</option>
+                            </select>
+                        </div>
+                    </fieldset>
+        
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="quick-links">
+                <a href="../home/home.html">Home</a>
+                <a href="../academics/academics.html">Academics</a>
+                <a href="../admissions/admissions.html">Admissions</a>
+                <a href="../gallery/gallery.html">Gallery</a>
+            </div>
+            <p>&copy; 2024 THE STAR. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../mainJS/main.js"></script>
+</body>
+</html>

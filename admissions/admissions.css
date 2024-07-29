@@ -1,0 +1,313 @@
+/* Define root variables for colors */
+:root {
+    --primary-color:  #FFCC33;
+    --secondary-color: #444;
+    --text-color: #ddd;
+    --background-color: #2c2c2c;
+    --transition: color 0.3s ease;
+}
+
+/* Base styles for text */
+body {
+    font-family: "Open Sans", sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+p{
+    text-align: justify;
+}
+
+/* Base styles for links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+
+}
+
+/* Base styles for images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Base styles for containers */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #3c3c3c; /* Added background color for container */
+    border-radius: 8px; /* Added border-radius for a floaty appearance */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Added box-shadow for depth */
+}
+
+/* Base styles for sections */
+section {
+    margin-bottom: 30px;
+}
+
+/* Header styles */
+header {
+    /* background-color: var(--secondary-color); */
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px; /* Adjust as needed */
+    margin-right: 10px;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: 1rem;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a.active-link{
+    color: var(--primary-color);
+}
+
+/* Main content styles */
+main {
+    padding: 20px 0;
+}
+
+/* Additional styles for specific sections */
+/* Form styles */
+/* Admission form styles */
+#admission-form {
+    text-align: left;
+}
+
+#admission-form form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#admission-form h2 {
+    margin-bottom: 20px;
+    margin-left: 18rem;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    background: none;
+    color: var(--text-color);
+    border: 1px solid #ddd;
+    background-color: #3a3a3a;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+select {
+    outline: none;
+    border-color: #555;
+}
+
+button[type="submit"] {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: var(--transition);
+    border: 1px solid #ddd;
+    /* margin-left: 18rem; */
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    transform: scale(1.8);
+}
+
+.gender{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.gender label{
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #ddd;
+    font-size: 1.2rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #555;
+}
+
+/* Change color of selected dates */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Invert the color of the calendar icon */
+}
+
+/* Change background color of the calendar */
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    background-color: #444; /* Change to your desired background color */
+}
+
+/* Change font size of dates displayed in the calendar */
+input[type="date"]::-webkit-calendar-picker-indicator::part(calendar) {
+    font-size: 14px; /* Change to your desired font size */
+}
+
+/* Footer styles */
+footer {
+    /* background-color: var(--secondary-color); */
+    padding: 20px 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    color: var(--text-color);
+    text-align: center;
+}
+
+.quick-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.quick-links a{
+    color: var(--text-color);
+    transition: var(--transition);
+}
+
+.quick-links a:hover{
+    color: var(--primary-color);
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    #admission-form h2 {
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    button[type="submit"] {
+        margin-left: 0;
+    }
+    /* Adjust other styles for smaller screens */
+}
